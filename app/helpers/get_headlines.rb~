@@ -1,0 +1,8 @@
+require 'rubygems'
+require 'hpricot'
+
+def getElementByStyle (url, style)
+	doc = open(url) { |f| hpricot(f) }
+	puts (doc/"p."+style)
+end
+
